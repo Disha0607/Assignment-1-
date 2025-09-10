@@ -2,22 +2,23 @@
 grades = float(input("ENTER YOUR GRADES="))
 
 #function declaration
-def calculate(gradesscore):
-    if 0 <= gradesscore < 60:
-        return "F"
-    elif 60 <= gradesscore < 70:
-        return "D"
-    elif 70 <= gradesscore < 80:
-        return "C"
-    elif 80 <= gradesscore < 90:
-        return "B"
-    elif 90 <= gradesscore <= 100:
+def calculate(grade):
+    if 90 <= grade <= 100:
         return "A"
+    elif 80 <= grade < 90:
+        return "B"
+    elif 70 <= grade < 80:
+        return "C"
+    elif 60 <= grade < 70:
+        return "D"
+    elif 0 <= grade < 60:
+        return "F"
     else:
-        #returing the value
-        return "None"
+        return None
+
 
 #calling a function
 finalgrades = calculate(grades)
 
 print("YOUR GRADES WILL BE=", finalgrades)
+
