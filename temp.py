@@ -11,10 +11,8 @@
 #-------------------------------SOLUTION----------------------------------------
 
 #storing a number , Explicitly converting into float
-temp_fahrenheit=float(input("ENTER THE TEMPERATURE IN FAHRENHEIT= "))
+f = float(input("ENTER THE TEMPERATURE IN FAHRENHEIT= "))
+c = (f - 32) * 5 / 9
+print("THE TEMPERATURE CELSIUS WILL BE =", c)
 
-#converting into cellsuis
-convert_cel=(5/9) * (temp_fahrenheit - 32)
 
-#printing the result
-print("THE TEMPERATURE CELSIUS WILL BE =", convert_cel)
