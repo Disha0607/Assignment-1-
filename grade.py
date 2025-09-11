@@ -14,7 +14,7 @@ def calculate(grade):
 
 if __name__ == "__main__":
     try:
-        g = float(input("Enter grade: "))
+        g = float(input())
         print(calculate(g))
     except Exception:
         print("N/A")
