@@ -1,11 +1,14 @@
-def fair_weekly_paycheck_amount(hours):
-    return hours * 30
+def unfair_weekly_paycheck_amount(hours_worked):
+    return int(hours_worked) * 15
 
-def unfair_weekly_paycheck_amount(hours):
-    rounded_hours = int(hours)
-    return rounded_hours * 15
+def fair_weekly_paycheck_amount(hours_worked):
+    return hours_worked * 15
 
-if __name__ == "__main__":
-    hrs = float(input("Enter hours worked: "))
-    print("Fair weekly pay:", fair_weekly_paycheck_amount(hrs))
-    print("Unfair weekly pay:", unfair_weekly_paycheck_amount(hrs))
+# Example input
+hours_worked = float(input("Enter hours worked this week: "))
+
+unfair_pay = unfair_weekly_paycheck_amount(hours_worked)
+fair_pay = fair_weekly_paycheck_amount(hours_worked)
+
+print("Unfair paycheck amount:", unfair_pay)
+print("Fair paycheck amount:", fair_pay)
