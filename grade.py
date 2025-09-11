@@ -1,6 +1,9 @@
 # grade.py
+
 def calculate(grade):
-    if grade >= 90:
+    if grade == -1:
+        return "N/A"
+    elif grade >= 90:
         return "A"
     elif grade >= 80:
         return "B"
@@ -10,3 +13,10 @@ def calculate(grade):
         return "D"
     else:
         return "F"
+
+if __name__ == "__main__":
+    try:
+        g = float(input("Enter your grade: "))
+        print("Your grade will be:", calculate(g))
+    except Exception:
+        print("N/A")
