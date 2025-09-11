@@ -1,10 +1,21 @@
-# pay.py
+# GETTING USER INPUT
+number_of_hours = float(input("ENTER THE NUMBERS OF HOURS YOU HAVE WORKED = "))
 
-def compute_pay(hours, rate):
-    return hours * rate
+# DEFINING A FUNCTION
+def unfair_weekly_paycheck_amount(number_of_hours):
+    # rounded hours
+    rounded_hours = int(number_of_hours)
+    pay = 15 * rounded_hours
+    # RETURNING THE PAY
+    return pay
 
-# Optional: input/output only runs if the script is called directly, not on import
-if __name__ == "__main__":
-    hours = float(input("Enter hours: "))
-    rate = float(input("Enter rate: "))
-    print(compute_pay(hours, rate))
+# CALLING THE FUNCTION
+total_pay = unfair_weekly_paycheck_amount(number_of_hours)
+print("THE UNFAIR WEEKLY AMOUNT =", total_pay)
+
+def fair_weekly_paycheck_amount(n_hours):
+    payrate = 15 * n_hours
+    return payrate
+
+payamount = fair_weekly_paycheck_amount(number_of_hours)
+print("THE FAIR WEEKLY AMOUNT =", payamount)
