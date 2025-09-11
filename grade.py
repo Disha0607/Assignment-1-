@@ -1,20 +1,13 @@
 def calculate(grade):
-    if grade == -1:
+    if grade < 0 or grade > 100:
         return "N/A"
-    elif grade >= 90:
-        return "A"
-    elif grade >= 80:
-        return "B"
-    elif grade >= 70:
-        return "C"
-    elif grade >= 60:
-        return "D"
-    else:
+    elif grade < 60:
         return "F"
-
-if __name__ == "__main__":
-    try:
-        g = float(input())
-        print(calculate(g))
-    except Exception:
-        print("N/A")
+    elif grade < 70:
+        return "D"
+    elif grade < 80:
+        return "C"
+    elif grade < 90:
+        return "B"
+    else:
+        return "A"
